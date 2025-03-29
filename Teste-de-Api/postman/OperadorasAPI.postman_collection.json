@@ -1,0 +1,64 @@
+{
+    "info": {
+      "_postman_id": "a1b2c3d4-e5f6-7890",
+      "name": "OperadorasAPI",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Buscar Operadoras",
+        "request": {
+          "method": "GET",  
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/api/search?q=saude&limit=5",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "search"],
+            "query": [
+              {"key": "q", "value": "saude"},
+              {"key": "limit", "value": "5"}
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Buscar por CNPJ",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/api/search?q=12345678000190",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "search"],
+            "query": [
+              {"key": "q", "value": "12345678000190"}
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Busca com limite padrão",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/api/search?q=medica",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "search"],
+            "query": [
+              {"key": "q", "value": "medica"}
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }

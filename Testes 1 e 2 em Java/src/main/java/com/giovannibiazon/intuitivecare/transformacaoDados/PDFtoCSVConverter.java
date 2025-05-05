@@ -46,7 +46,15 @@ public class PDFtoCSVConverter {
                     for (List<RectangularTextContainer> row : table.getRows()) {
                         List<String> rowData = new ArrayList<>();
                         for (RectangularTextContainer cell : row) {
-                            rowData.add(cell.getText().trim());
+                            String cellText = cell.getText().trim();
+
+                            if (cellText.equalsIgnoreCase("OD")) {
+                                cellText = "Odontologia";
+                            } else if (cellText.equalsIgnoreCase("AMB")) {
+                                cellText = "Ambulatorial";
+                            }
+
+                            rowData.add(cellText);
                         }
                         csvData.add(rowData.toArray(new String[0]));
                     }
